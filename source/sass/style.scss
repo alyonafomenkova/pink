@@ -1,0 +1,10 @@
+@import "base/normalize.scss";
+@import "base/fonts.scss";
+@import "base/base.scss";
+@import "abstract/mixins.scss";
+@import "abstract/variables.scss";
+/*------------------------------ Index page ------------------------------*/
+@import "blocks/page-header.scss";
+@import "blocks/main-logo.scss";
+@import "blocks/site-list.scss";
+@import "blocks/main-nav.scss";

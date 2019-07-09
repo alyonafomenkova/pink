@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Pink.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass -->
+  <style>
+    /* Используем <html> как слой с макетами */
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+
+    }
+
+    @media (min-width: 660px) {
+      HTML {
+        background-image: url("../img/pink-index-tablet.jpg");
+      }
+    }
+
+    @media (min-width: 960px) {
+      HTML {
+        background-image: url("../img/pink-index-desktop.jpg");
+      }
+    }
+
+    /* Делаем слой с разметкой полупрозрачным */
+    BODY {
+      opacity: 0.6;
+    }
+  </style>
+<!-- // Pixel Glass -->
+</head>
+<body>
+  <header class="page-header">
+    <a class="main-logo">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+        <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+        <img class="main-logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип сайта Pink">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle-btn" type="button">Открыть меню</button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--active" href="#">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Фотографии</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Конкурс</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script src="js/menu-toggle.js"></script>
+
+</body>
+</html>
