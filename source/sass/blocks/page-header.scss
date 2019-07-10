@@ -2,3 +2,9 @@
   padding-top: 22px;
   background-color: #1d2631;
 }
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    padding-top: 27px;
+  }
+}

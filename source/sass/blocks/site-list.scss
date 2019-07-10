@@ -1,5 +1,6 @@
 .site-list {
   @include list-reset;
+  padding-top: 26px;
 }
 
 .site-list__item {
@@ -22,5 +23,11 @@
     padding-top: 14px;
     border-top: solid 1px #000000;
     box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    padding-top: 43px;
   }
 }
