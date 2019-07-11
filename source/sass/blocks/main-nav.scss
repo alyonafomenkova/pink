@@ -41,6 +41,12 @@
   background-image: url("../img/icon-menu-cross.svg");
 }
 
-@media (min-width: $tablet-width) {
-  //
+@media (min-width: $desktop-width) {
+  .main-nav__toggle-btn {
+    display: none;
+  }
+
+  .main-nav--closed .site-list__item {
+    display: block;
+  }
 }

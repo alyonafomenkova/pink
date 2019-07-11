@@ -17,6 +17,7 @@
   display: block;
   padding-top: 16px;
   padding-bottom: 15px;
+  word-wrap: break-word;
   color: #ffffff;
 
   &--active {
@@ -29,5 +30,32 @@
 @media (min-width: $tablet-width) {
   .site-list {
     padding-top: 43px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0;
+    padding-top: 12px;
+  }
+
+  .site-list__item {
+    margin-left: 80px;
+    font-weight: normal;
+    border: none;
+    box-shadow: none;
+  }
+
+  .site-list__link {
+    padding: 0;
+    text-transform: none;
+    box-shadow: none;
+
+    &--active {
+      border: none;
+    }
   }
 }

@@ -2,3 +2,9 @@
   display: block;
   padding-left: 20px;
 }
+
+@media (min-width: $desktop-width) {
+  .main-logo {
+    padding-left: 0;
+  }
+}

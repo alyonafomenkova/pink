@@ -8,3 +8,17 @@
     padding-top: 27px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 100%;
+    padding: 27px 10px;
+  }
+
+  .page-header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
