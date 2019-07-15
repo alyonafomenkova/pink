@@ -37,31 +37,34 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header--wrapper">
-      <a class="main-logo">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-          <img class="main-logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип сайта Pink">
-        </picture>
-      </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle-btn" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--active" href="#">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="page-header--top">
+      <div class="page-header--wrapper">
+        <a class="main-logo">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="main-logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип сайта Pink">
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle-btn" type="button">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--active" href="#">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+                Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <section class="download">
       <div class="download__wrapper">
@@ -69,7 +72,7 @@
         <p class="download__slogan">Взгляните на жизнь иначе!</p>
         <a class="download__main-btn" href="https://www.apple.com/ru/itunes/"> Скачать приложение</a>
         <ul class="download__list">
-          <li class="download__item">
+          <li class="download__item download__item--iTunes">
             <a class="download__link" href="https://www.apple.com/ru/itunes/">
               <span class="visually-hidden">Скачать в iTunes</span>
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +83,7 @@
               </svg>
             </a>
           </li>
-          <li class="download__item">
+          <li class="download__item download__item--googlePlay">
             <a class="download__link" href="https://play.google.com/store?hl=ru">
               <span class="visually-hidden">Скачать в Google Play</span>
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +101,7 @@
 
             </a>
           </li>
-          <li class="download__item">
+          <li class="download__item download__item--MStore">
             <a class="download__link" href="https://www.microsoft.com/ru-ru/store/b/home">
               <span class="visually-hidden">Скачать в Microsoft Store</span>
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"

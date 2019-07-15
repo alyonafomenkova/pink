@@ -14,21 +14,40 @@
   }
 }
 
-.page-header--wrapper {
+.page-header--top{
   padding-top: 22px;
   background-color: rgba(0,0,0,0.3);
 }
 
 @media (min-width: $tablet-width) {
-  .page-header {
+  .page-header--transparent {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 1200px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  .page-header--top {
     padding-top: 27px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    width: 100%;
-    padding: 27px 10px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .page-header--top {
+    padding-top: 0;
   }
 
   .page-header--wrapper {
@@ -36,5 +55,6 @@
     justify-content: space-between;
     max-width: 940px;
     margin: 0 auto;
+    padding: 27px 10px;
   }
 }
