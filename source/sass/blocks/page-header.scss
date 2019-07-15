@@ -1,6 +1,22 @@
 .page-header {
+  background-color: #283645;
+}
+
+.page-header--transparent {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 660px auto;
+  }
+}
+
+.page-header--wrapper {
   padding-top: 22px;
-  background-color: #1d2631;
+  background-color: rgba(0,0,0,0.3);
 }
 
 @media (min-width: $tablet-width) {

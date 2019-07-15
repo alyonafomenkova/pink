@@ -6,10 +6,6 @@
   display: none;
 }
 
-.main-nav--nojs .site-list__item {
-  display: block;
-}
-
 .main-nav--closed .main-nav__toggle-btn {
   position: absolute;
   top: -21px;
@@ -19,13 +15,17 @@
   padding: 0;
   font-size: 0;
   border: none;
-  background: none;
+  background: transparent;
   background-repeat: no-repeat;
   background-image: url("../img/icon-menu-burger.svg");
 }
 
 .main-nav--closed .site-list__item {
   display: none;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
 }
 
 .main-nav--opened .main-nav__toggle-btn {
@@ -36,7 +36,7 @@
   height: 23px;
   font-size: 0;
   border: none;
-  background: none;
+  background: transparent;
   background-repeat: no-repeat;
   background-image: url("../img/icon-menu-cross.svg");
 }
