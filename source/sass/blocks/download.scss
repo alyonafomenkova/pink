@@ -1,0 +1,56 @@
+.download {
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: left 105px, center -70px;
+  background-size: 258px 320px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+    background-size: 261px auto, 660px 465px;
+  }
+}
+
+.download__wrapper {
+  padding: 422px 20px 15px 20px;
+}
+
+.download__slogan {
+  display: none;
+  margin: 0;
+}
+
+.download__main-btn {
+  display: block;
+  padding: 13px;
+  margin-bottom: 33px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  border: solid 3px #ffffff;
+  border-radius: 28px;
+}
+
+.download__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.download__item {
+  padding: 0;
+  margin: 0;
+  margin-right: 34px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.download__description {
+  text-align: center;
+  color: #ffffff;
+}
