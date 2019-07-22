@@ -1,0 +1,111 @@
+.statistics {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .statistics {
+    display: block;
+    padding-top: 58px;
+    margin: 0;
+    word-wrap: break-word;
+  }
+
+  .statistics__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    width: 620px;
+    margin: 0 auto;
+    padding-bottom: 85px;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px 276px;
+
+    &::after {
+      content: "24";
+      position: absolute;
+      display: flex;
+      top: 55px;
+      left: 17px;
+      justify-content: center;
+      align-items: center;
+      width: 202px;
+      height: 202px;
+      font-size: 96px;
+      line-height: 149px;
+      font-weight: bold;
+      color: #d22856;
+      background-color: transparent;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+    }
+  }
+
+  .statistics__title {
+    width: 310px;
+    margin: 0;
+    padding: 0;
+    margin-top: 38px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .statistics__description {
+    width: 310px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  .statistics__link {
+    width: 310px;
+    color: #d22856;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .statistics {
+    padding-top: 21px;
+    background-color: #f2f2f2;
+  }
+
+  .statistics__wrapper {
+    width: 940px;
+    padding-bottom: 112px;
+    background-size: 298px 345px;
+
+    &::after {
+      top: 68px;
+      left: 20px;
+      width: 253px;
+      height: 253px;
+      font-size: 120px;
+      line-height: 186px;
+      border-width: 19px;
+    }
+  }
+
+  .statistics__title {
+    width: 580px;
+    margin-top: 92px;
+  }
+
+  .statistics__title br {
+    display: none;
+  }
+
+  .statistics__description {
+    width: 580px;
+    margin-top: 20px;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .statistics__link {
+    width: 580px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
