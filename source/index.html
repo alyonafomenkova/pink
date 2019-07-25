@@ -160,23 +160,23 @@
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews slider reviews--nojs">
       <h2 class="visually-hidden">Отзывы</h2>
-      <ul class="reviews__list">
-        <li class="reviews__item">
+      <ul class="reviews__list slider__list">
+        <li class="reviews__item slider__item slider__item--current">
           <span class="reviews__author">Николай Петров</span>
           <span class="reviews__author--info">25 лет, водитель трамвая</span>
           <p class="reviews__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
             привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </li>
-        <li class="reviews__item">
+        <li class="reviews__item slider__item">
           <span class="reviews__author">Василий Иванов</span>
           <span class="reviews__author--info">20 лет, студент</span>
           <p class="reviews__description">«Самое классное приложение! Всем советую!»
           </p>
         </li>
-        <li class="reviews__item">
+        <li class="reviews__item slider__item">
           <span class="reviews__author">Сергей Кошкин</span>
           <span class="reviews__author--info">40 лет, учитель</span>
           <p class="reviews__description">«Узнал о приложении от своих учеников. С тех пор ежедневно пользуюсь им! Очень
@@ -184,11 +184,37 @@
           </p>
         </li>
       </ul>
+      <ul class="slider__toggles">
+        <li>
+          <button class="slider__toggle slider__toggle--current" type="button">
+            <span class="visually-hidden">Первый слайд</span>
+          </button>
+        </li>
+        <li>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Второй слайд</span>
+          </button>
+        </li>
+        <li>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Третий слайд</span>
+          </button>
+        </li>
+      </ul>
+      <div class="slider__arrows">
+        <button class="slider__arrow slider__arrow--left" type="button">
+          <span class="visually-hidden">Предыдущий отзыв</span>
+        </button>
+        <button class="slider__arrow slider__arrow--right" type="button">
+          <span class="visually-hidden">Следующий отзыв</span>
+        </button>
+      </div>
     </section>
 
   </main>
 
   <script src="js/menu-toggle11.js"></script>
+  <script src="js/slider.js"></script>
 
 </body>
 
