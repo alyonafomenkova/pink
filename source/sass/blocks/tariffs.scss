@@ -130,18 +130,111 @@
 }
 
 @media (min-width: $tablet-width) {
+  .tariffs {
+    margin-top: 20px;
+    padding-bottom: 40px;
+
+    &::before {
+      height: 48px;
+    }
+  }
+
   .tariffs__wrapper {
-    width: 620px;
+    width: 660px;
+    padding: 85px 20px 0 20px;
   }
 
   .tariffs__table {
     width: 100%;
     transform: none;
   }
+
+  .tariffs__header {
+    width: 25%;
+    padding: 12px 10px 8px 7px;
+
+    &--empty {
+      display: table-cell;
+    }
+
+    &--hit::before {
+      top: 4px;
+      left: -30px;
+    }
+  }
+
+  .tariffs__title {
+    font-size: 16px;
+  }
+
+  .tariffs__price {
+    font-size: 18px;
+  }
+
+  .tarifes__option {
+    padding: 5px 0 9px 15px;
+    text-transform: none;
+
+    &--name {
+      display: table-cell;
+      width: 25%;
+    }
+
+    &--first {
+      border-top: 2px solid #e5e5e5;
+    }
+  }
+
+  .tarifes__option-availability {
+    font-size: 0;
+
+    &::after {
+      right: calc(50% - 14px);
+    }
+  }
+
+  .tarifes__toggles {
+    display: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .tariffs {
+    margin-top: 35px;
+    padding-bottom: 62px;
+
+    &::before {
+      height: 80px;
+    }
+  }
+
   .tariffs__wrapper {
     width: 940px;
+    padding: 151px 0 0;
+  }
+
+  .tariffs__header {
+    padding: 16px 20px 22px;
+
+    &--hit::before {
+      top: 10px;
+    }
+  }
+
+  .tariffs__title,
+  .tariffs__price {
+    font-size: 18px;
+}
+
+  .tarifes__option {
+    padding: 15px 10px 15px 20px;
+
+    &--name {
+      font-size: 18px;
+    }
+  }
+
+  .tarifes__option-availability::after {
+    right: calc(50% - 16px);
   }
 }
