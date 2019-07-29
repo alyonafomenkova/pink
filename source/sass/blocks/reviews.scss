@@ -33,7 +33,7 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    margin-top: 21px;
+    margin-top: 24px;
   }
 
   .reviews__author {
@@ -49,6 +49,7 @@
 
   .reviews__description {
     width: 620px;
+    min-height: 90px;
     font-size: 18px;
     order: -1;
   }
