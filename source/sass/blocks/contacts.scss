@@ -96,6 +96,10 @@
   }
 }
 
+.contacts__map-js .contacts__map--wrapper {
+  min-height: 200px;
+}
+
 .contacts__map-js .contacts__map-fallback {
   display: none;
 
@@ -172,6 +176,10 @@
     }
   }
 
+  .contacts__map-js .contacts__map--wrapper {
+    min-height: 375px;
+  }
+
   .contacts__map-fallback-img {
     top: -325px;
   }
@@ -225,6 +233,10 @@
 
   .contacts__map-fallback-img {
     top: -170px;
+  }
+
+  .contacts__map-js .contacts__map--wrapper {
+    min-height: 488px;
   }
 
   .contacts__map-yandex {

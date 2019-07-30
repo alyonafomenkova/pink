@@ -1,0 +1,39 @@
+.page-footer {
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  margin-top: 480px;//
+
+  &--index {
+    display: none;
+  }
+}
+
+.page-footer__logo {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 660px;
+    margin: 0 auto;
+    padding: 35px 20px;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    width: 960px;
+    padding: 67px 10px 75px 10px;
+  }
+}

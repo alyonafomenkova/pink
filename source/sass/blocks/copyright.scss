@@ -1,0 +1,38 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 26px;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.copyright__title {
+  margin-right: 12px;
+  line-height: 18px;
+  word-wrap: break-word;
+}
+
+.copyright__icon {
+  fill: #d22856;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__title {
+    margin-right: 15px;
+    font-size: 18px;
+  }
+}
