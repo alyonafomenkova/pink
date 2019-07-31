@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.main-nav--nojs {
+  border-bottom: solid 1px #000000;
+}
+
 .main-nav--nojs .main-nav__toggle-btn {
   display: none;
 }
