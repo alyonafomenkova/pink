@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Academy: Pink.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass -->
+  <!--<style>
+    /* Используем <html> как слой с макетами */
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("../img/pink-index-mobile.jpg");
+    }
+
+    @media (min-width: 660px) {
+      HTML {
+        background-image: url("../img/pink-index-tablet.jpg");
+      }
+    }
+
+    @media (min-width: 960px) {
+      HTML {
+        background-image: url("../img/pink-index-desktop.jpg");
+      }
+    }
+
+    /* Делаем слой с разметкой полупрозрачным */
+    BODY {
+      opacity: 0.6;
+    }
+  </style>-->
+  <!-- // Pixel Glass -->
+</head>
+
+<body>
+  <header class="page-header page-header--inner">
+    <div class="page-header--top">
+      <div class="page-header--wrapper">
+        <a class="main-logo">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="main-logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип сайта Pink">
+          </picture>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle-btn" type="button">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--active" href="#">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+                Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="page-header--bottom">
+      <p class="page-header__slogan page-header__slogan--inner">Фотографии пользователей</p>
+    </div>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Фотографии наших пользователей</h1>
+    <article class="gallery">
+      <h2 class="visually-hidden">Галерея самых лучших фотографий</h2>
+      <p class="gallery__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+      </p>
+      <div class="gallery__list">
+        <div class="gallery__item gallery__item--panorama">
+          <div class="gallery__img-wrapper">
+            <picture>
+              <!--<source type="image/webp" media="(min-width: 960px)"
+                srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">-->
+              <source media="(min-width: 960px)"
+                srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x"
+                alt="Панорамное фото">
+            </picture>
+          </div>
+          <div class="gallery__post gallery__post--panorama">
+            <p class="gallery__post-author">Анна<span class="gallery__post-time"> (5 минут назад)</span></p>
+            <p class="gallery__post-text gallery__post-text--panorama">Прыгать или нет? Напишите в коментарии свой совет
+              и смотрите прямую
+              трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="gallery__likes-wrapper gallery__likes-wrapper--panorama">
+              <p class="gallery__likes-amount">Нравится: 215</p>
+              <button class="gallery__likes-btn gallery__likes-btn--panorama" type="button">Поставить лайк</button>
+            </div>
+          </div>
+        </div>
+        <ul class="gallery__standart-list">
+          <li class="gallery__item gallery__standart-item gallery__item--standart">
+            <div class="gallery__img-wrapper">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">-->
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x"
+                  alt="Фото классного девайса">
+              </picture>
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__post-author">Левон<span class="gallery__post-time"> (5 часов назад)</span></p>
+              <p class="gallery__post-text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="gallery__likes-wrapper">
+                <p class="gallery__likes-amount">Нравится: 356</p>
+                <button class="gallery__likes-btn" type="button">Поставить лайк</button>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item gallery__standart-item gallery__item--standart">
+            <div class="gallery__img-wrapper">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 960px)"
+                    srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">-->
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-drumset-mobile@1x.jpg"
+                  srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фото ударных инструментов">
+              </picture>
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__post-author">Антон<span class="gallery__post-time"> (12 часов назад)</span></p>
+              <p class="gallery__post-text">Соседи будут рады!</p>
+              <div class="gallery__likes-wrapper">
+                <p class="gallery__likes-amount">Нравится: 666</p>
+                <button class="gallery__likes-btn" type="button">Поставить лайк</button>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item gallery__standart-item gallery__item--standart">
+            <div class="gallery__img-wrapper">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 960px)"
+                      srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)"
+                      srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">-->
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-window-mobile@1x.jpg"
+                  srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фото из окна">
+              </picture>
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__post-author">Борис<span class="gallery__post-time"> (20 часов назад)</span></p>
+              <p class="gallery__post-text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="gallery__likes-wrapper">
+                <p class="gallery__likes-amount">Нравится: 215</p>
+                <button class="gallery__likes-btn" type="button">Поставить лайк</button>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item gallery__standart-item gallery__item--standart">
+            <div class="gallery__img-wrapper">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 960px)"
+                        srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 660px)"
+                        srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">-->
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x"
+                  alt="Кубанская бахча">
+              </picture>
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__post-author">Сергей<span class="gallery__post-time"> (25 часов назад)</span></p>
+              <p class="gallery__post-text">Самая кубанская в мире!</p>
+              <div class="gallery__likes-wrapper">
+                <p class="gallery__likes-amount">Нравится: 4</p>
+                <button class="gallery__likes-btn" type="button">Поставить лайк</button>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item gallery__standart-item gallery__item--standart">
+            <div class="gallery__img-wrapper">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 960px)"
+                          srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 660px)"
+                          srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">-->
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x"
+                  alt="В горах">
+              </picture>
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__post-author">Максим<span class="gallery__post-time"> (40 часов назад)</span></p>
+              <p class="gallery__post-text">Где снег-то?</p>
+              <div class="gallery__likes-wrapper">
+                <p class="gallery__likes-amount">Нравится: 150</p>
+                <button class="gallery__likes-btn" type="button">Поставить лайк</button>
+              </div>
+            </div>
+          </li>
+          <li class="gallery__item gallery__standart-item gallery__item--standart">
+            <div class="gallery__img-wrapper">
+              <picture>
+                <!--<source type="image/webp" media="(min-width: 960px)"
+                            srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                          <source type="image/webp" media="(min-width: 660px)"
+                            srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                          <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">-->
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x"
+                  alt="Выше облаков">
+              </picture>
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__post-author">Надежда<span class="gallery__post-time"> (45 часов назад)</span></p>
+              <p class="gallery__post-text">Всем GM и взаимные лайки!</p>
+              <div class="gallery__likes-wrapper">
+                <p class="gallery__likes-amount">Нравится: 2560</p>
+                <button class="gallery__likes-btn" type="button">Поставить лайк</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="page-footer page-footer--index">
+    <a class="page-footer__logo">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+        <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg">
+        <img class="page-footer__logo--img" src="img/logo-pink-blue-mobile.svg" alt="Логотип сайта Pink">
+      </picture>
+    </a>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="#">
+            <span class="visually-hidden">Мы в Твитер</span>
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.663" fill="#d22856">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11.283.153c1.736-.485 3.074.263 3.685 1.151.694-.226 1.372-.47 2.072-.691-.004.841-.538 1.478-.883 1.727.704.166 1.343-.48 1.343-.48-.175.976-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.32 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.654 4.769 4.364 8.29 4.528 8.506 2.288 9.461.787 11.283.153z" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Мы в Фейсбук</span>
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="8.673" height="18.944" fill="#d22856">
+              <path
+                d="M6.275 3.357h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.115H0v3.517h1.958v9.312h3.837V9.632h2.857V6.115H5.786c-.021-1.045-.036-2.406.489-2.758z" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Мы на Ютуб</span>
+            <svg class="social__icon social__icon--youtube" version="1.0" xmlns="http://www.w3.org/2000/svg"
+              width="14.64" height="13.96" fill="#d22856">
+              <path
+                d="M1.775 13.78C.799 14.257 0 13.758 0 12.671V1.29C0 .202.799-.295 1.775.181l12.133 5.932c.975.478.975 1.258 0 1.736L1.775 13.78z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__title">Разработано</span>
+        <span class="visually-hidden">HTML Academy</span>
+        <svg class="copyright__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px"
+          viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <path
+            d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z" />
+        </svg>
+      </a>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/menu-togglez.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+
+</html>
