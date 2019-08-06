@@ -1,6 +1,7 @@
 @import "base/normalize.scss";
 @import "base/fonts.scss";
 @import "base/base.scss";
+@import "base/main-button.scss";
 @import "abstract/mixins.scss";
 @import "abstract/variables.scss";
 /*------------------------------ Index page ------------------------------*/
@@ -20,3 +21,6 @@
 @import "blocks/copyright.scss";
 /*------------------------------ Photo page ------------------------------*/
 @import "blocks/gallery.scss";
+@import "blocks/post.scss";
+@import "blocks/img-filter.scss";
+

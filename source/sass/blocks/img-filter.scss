@@ -1,0 +1,68 @@
+.img-filter {
+  margin-top: 42px;
+  padding: 20px 20px 41px;
+  background-color: #f2f2f2;
+}
+
+.img-filter__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 42px 0 28px;
+}
+
+.img-filter__btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin: 0 34px 0 0;
+  cursor: pointer;
+
+  &--fill {
+    margin-right: 37px;
+  }
+
+  &--contrast {
+    margin-right: 0;
+  }
+
+  & svg {
+    opacity: 0.3;
+  }
+
+  &--active svg,
+  &:active svg {
+    fill: #d22856;
+    opacity: 1;
+  }
+}
+
+.img-filter__control {
+  display: none;
+
+  &--fill {
+    display: block;
+  }
+}
+
+.img-filter__scale {
+  position: relative;
+  width: 240px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #283645;
+}
+
+.img-filter__toggle {
+  position: absolute;
+  top: -6px;
+  left: 80%;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  cursor: pointer;
+}
