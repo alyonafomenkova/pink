@@ -95,6 +95,7 @@
   .gallery {
     width: 100%;
     margin-top: 92px;
+    margin-bottom: 50px;
   }
 
   .gallery__text {
@@ -201,6 +202,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .gallery {
+    margin-bottom: 31px;
+  }
+
   .gallery__list {
     justify-content: center;
   }
