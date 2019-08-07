@@ -41,7 +41,7 @@
 .img-filter__control {
   display: none;
 
-  &--fill {
+  &--crop {
     display: block;
   }
 }
@@ -65,4 +65,89 @@
   border: 2px solid #d22856;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .img-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    margin-top: 68px;
+    padding: 57px 20px 54px;
+  }
+
+  .img-filter__list {
+    display: none;
+  }
+
+  .img-filter__control {
+    position: relative;
+    padding: 19px 0 0;
+    margin-bottom: 51px;
+
+    &--fill,
+    &--contrast {
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    &--crop::before {
+      background-image: url("../img/icon-editor-crop-bg.svg");
+    }
+
+    &--fill::before {
+      top: 10px;
+      background-image: url("../img/icon-editor-fill-bg.svg");
+    }
+
+    &--contrast::before {
+      top: 10px;
+      left: 7px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../img/icon-editor-contrast-bg.svg");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -36px;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #dddfe0;
+    }
+  }
+
+  .img-filter__scale {
+    width: 202px;
+    margin-right: 18px;
+    margin-left: auto;
+  }
+
+  .img-filter__toggle {
+    left: 72%;
+
+    &--fill {
+      left: 12%;
+    }
+
+    &--contrast {
+      left: 47%;
+    }
+  }
 }

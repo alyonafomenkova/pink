@@ -36,3 +36,36 @@
   border-color: #283645;
   opacity: 0.1;
 }
+
+@media (min-width: $tablet-width) {
+  .post {
+    width: 660px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .post__text {
+    width: 500px;
+    font-size: 18px;
+  }
+
+  .post__buttons {
+    margin-top: 100px;
+    padding-right: 14px;
+  }
+
+  .post__main-btn {
+    width: 260px;
+    //padding-left: 10px;
+    //padding-right: 10px;
+
+    &--submit {
+      margin-bottom: 24px;
+    }
+  }
+
+
+
+}
