@@ -9,7 +9,7 @@
   margin: 0 auto;
   font-size: 24px;
   line-height: 29px;
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   color: #ffffff;
 
@@ -21,6 +21,11 @@
   &--inner {
     padding-top: 26px;
     padding-bottom: 85px;
+  }
+
+  &--form {
+    width: 280px;
+    padding-bottom: 55px;
   }
 }
 
