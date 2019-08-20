@@ -386,3 +386,79 @@
     margin: 0;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .competition {
+    width: 940px;
+    margin-bottom: 0;
+  }
+
+  .competition__text {
+    width: 820px;
+    margin-bottom: 65px;
+  }
+
+  .competition__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .competition__fieldset {
+    width: auto;
+  }
+
+  .competition__wrapper--personality,
+  .competition__wrapper--platform {
+    width: 435px;
+  }
+
+  .competition__wrapper--achievement,
+  .competition__wrapper--contacts,
+  .competition__wrapper--comment {
+    width: 100%;
+  }
+
+  .competition__wrapper--platform,
+  .competition__wrapper--comment {
+    padding-bottom: 0;
+  }
+
+  .competition__wrapper--contacts {
+    padding-top: 5px;
+  }
+
+  .competition__inputs-wrapper--contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 12px;
+  }
+
+  .competition__inputs-wrapper--achievement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+
+  .competition__input-wrap--contacts {
+    width: 373px;
+    margin: 0;
+  }
+
+  .competition__input--comment {
+    min-height: 128px;
+  }
+
+  .competition__bottom-wrapper {
+    width: 940px;
+    margin-top: 45px;
+    margin-bottom: 0;
+  }
+
+  .competition__explanation--addition {
+    display: inline;
+  }
+}
