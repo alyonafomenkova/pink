@@ -189,3 +189,200 @@
     display: none;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .competition {
+    width: 660px;
+    margin-top: 92px;
+  }
+
+  .competition__text {
+    width: 540px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 18px;
+
+    &--addition {
+      display: inline;
+    }
+  }
+
+  .competition__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .competition__wrapper {
+    background-color: #ffffff;
+
+    &--personality {
+      padding-bottom: 0;
+    }
+
+    &--platform {
+      padding-top: 7px;
+      order: 1;
+    }
+
+    &--contacts {
+      padding-top: 15px;
+      order: 2;
+    }
+
+    &--achievement {
+      padding-top: 30px;
+      order: 3;
+    }
+
+    &--comment {
+      padding-top: 11px;
+      order: 4;
+    }
+  }
+
+  .competition__fieldset {
+    width: 620px;
+    margin: 0 auto;
+    border: 2px solid #e5e5e5;
+
+    &--noborder {
+      border: none;
+    }
+  }
+
+  .competition__legend {
+    width: auto;
+    padding: 0 30px;
+
+    &--contacts {
+      display: block;
+      margin-bottom: 27px;
+    }
+
+    &--achievement,
+    &--comment {
+      margin-bottom: 27px;
+    }
+  }
+
+  .competition__inputs-wrapper {
+    padding: 10px 60px 55px;
+
+    &--personality {
+      padding: 0;
+    }
+
+    &--contacts {
+      padding-bottom: 25px;
+    }
+
+    &--achievement {
+      padding-top: 20px;
+    }
+
+    &--comment {
+      padding-bottom: 40px;
+    }
+  }
+
+  .competition__input-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 52px;
+
+    &--contacts {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .competition__input {
+    &--grow {
+      width: auto;
+      flex-grow: 1;
+    }
+
+    &--phone,
+    &--email {
+      width: 100%;
+      padding: 14px 17px 15px;
+      order: -1;
+      background-repeat: no-repeat, no-repeat;
+      background-position: calc(100% - 20px) center, right center;
+    }
+
+    &--phone {
+      background-image: url("../img/icon-phone.svg"), linear-gradient(to right, #e5e5e5 0%,#e5e5e5 100%);
+      background-size: 20px 19px;
+      background-size: 20px 19px, 60px 60px;
+    }
+
+    &--email {
+      background-image: url("../img/icon-mail.svg"), linear-gradient(to right,#e5e5e5 0%,#e5e5e5 100%);
+      background-size: 18px 13px, 60px 60px;
+    }
+
+    &--comment {
+      width: 100%;
+    }
+  }
+
+  .competition__label {
+    margin-left: 0;
+    margin-right: 22px;
+
+    &--radio {
+      margin-left: 57px;
+    }
+
+    &--contacts {
+      margin-top: 10px;
+      margin-bottom: 0;
+      margin-left: 18px;
+    }
+
+    &--checkbox {
+      margin-left: 57px;
+    }
+  }
+
+  .competition__input--radio + label::before {
+    left: -60px;
+  }
+
+  .competition__input--radio:checked + label::after {
+    top: 6px;
+    left: -47px;
+  }
+
+  .competition__input--checkbox + label::before {
+    top: -2px;
+    left: -59px;
+  }
+
+  .competition__input--checkbox:checked + label::after {
+    top: 3px;
+    left: -48px;
+  }
+
+  .competition__bottom-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 25px 20px;
+    order: 5;
+  }
+
+  .competition__btn {
+    width: 300px;
+    margin: 0;
+  }
+}

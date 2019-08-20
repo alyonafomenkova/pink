@@ -53,7 +53,7 @@
         бонусную карту! <span class="competition__text--addition">Пожалуйста, заполните форму ниже:</span></p>
       <form class="competition__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="competition__wrapper competition__wrapper--personality">
-          <fieldset class="competition__fieldset">
+          <fieldset class="competition__fieldset competition__fieldset--noborder">
             <legend class="visually-hidden">Фамилия Имя Отчество</legend>
             <div class="competition__inputs-wrapper competition__inputs-wrapper--personality">
               <div class="competition__input-wrap">
@@ -77,7 +77,7 @@
 
         <div class="competition__wrapper competition__wrapper--achievement">
           <fieldset class="competition__fieldset">
-            <legend class="competition__legend">Ваши безбашенные достижения в путешествии</legend>
+            <legend class="competition__legend competition__legend--achievement">Ваши безбашенные достижения в путешествии</legend>
             <div class="competition__inputs-wrapper competition__inputs-wrapper--achievement">
               <input class="competition__input competition__input--checkbox visually-hidden" type="checkbox"
                 name="selfie" id="achievement_selfie" checked>
@@ -111,13 +111,13 @@
           <fieldset class="competition__fieldset">
             <legend class="competition__legend competition__legend--contacts">Контактная информация</legend>
             <div class="competition__inputs-wrapper competition__inputs-wrapper--contacts">
-              <div class="competition__input-wrap">
-                <label class="competition__label" for="contacts_phone">Номер телефона</label>
+              <div class="competition__input-wrap competition__input-wrap--contacts">
+                <label class="competition__label competition__label--contacts" for="contacts_phone">Номер телефона</label>
                 <input class="competition__input competition__input--grow competition__input--phone" type="tel"
                   name="phone" id="contacts_phone" placeholder="Номер, пожалуйста">
               </div>
-              <div class="competition__input-wrap">
-                <label class="competition__label" for="contacts_email">Адрес почты</label>
+              <div class="competition__input-wrap competition__input-wrap--contacts">
+                <label class="competition__label competition__label--contacts" for="contacts_email">Адрес почты</label>
                 <input class="competition__input competition__input--grow competition__input--email" type="email"
                   name="email" id="contacts_email" placeholder="Введите почту *" required>
               </div>
