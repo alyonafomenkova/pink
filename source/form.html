@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Pink.</title>
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -13,11 +17,15 @@
     <div class="page-header--top">
       <div class="page-header--wrapper">
         <a class="main-logo">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img class="main-logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип сайта Pink">
-          </picture>
+          <svg class="main-logo__img main-logo__img--desktop" width="146" height="40">
+            <use xlink:href="img/sprite.svg#logo-white-desktop"></use>
+          </svg>
+          <svg class="main-logo__img main-logo__img--tablet" width="146" height="40">
+            <use xlink:href="img/sprite.svg#logo-white-tablet"></use>
+          </svg>
+          <svg class="main-logo__img main-logo__img--mobile" width="74" height="23">
+            <use xlink:href="img/sprite.svg#logo-white-mobile"></use>
+          </svg>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle-btn" type="button">Открыть меню</button>
@@ -77,7 +85,8 @@
 
         <div class="competition__wrapper competition__wrapper--achievement">
           <fieldset class="competition__fieldset">
-            <legend class="competition__legend competition__legend--achievement">Ваши безбашенные достижения в путешествии</legend>
+            <legend class="competition__legend competition__legend--achievement">Ваши безбашенные достижения в
+              путешествии</legend>
             <div class="competition__inputs-wrapper competition__inputs-wrapper--achievement">
               <input class="competition__input competition__input--checkbox visually-hidden" type="checkbox"
                 name="selfie" id="achievement_selfie" checked>
@@ -112,7 +121,8 @@
             <legend class="competition__legend competition__legend--contacts">Контактная информация</legend>
             <div class="competition__inputs-wrapper competition__inputs-wrapper--contacts">
               <div class="competition__input-wrap competition__input-wrap--contacts">
-                <label class="competition__label competition__label--contacts" for="contacts_phone">Номер телефона</label>
+                <label class="competition__label competition__label--contacts" for="contacts_phone">Номер
+                  телефона</label>
                 <input class="competition__input competition__input--grow competition__input--phone" type="tel"
                   name="phone" id="contacts_phone" placeholder="Номер, пожалуйста">
               </div>
