@@ -12,6 +12,11 @@
   display: block;
   width: 150px;
   margin: 0 auto;
+
+  &-img--tablet,
+  &-img--desktop {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -27,6 +32,14 @@
 
   .page-footer__logo {
     margin: 0;
+
+    &-img--mobile {
+      display: none;
+    }
+
+    &-img--tablet {
+      display: block;
+    }
   }
 }
 
@@ -34,5 +47,15 @@
   .page-footer {
     width: 960px;
     padding: 67px 10px 75px 10px;
+  }
+
+  .page-footer__logo-img {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 }
