@@ -145,6 +145,7 @@
   }
 
   .contacts__field {
+    position: relative;
     margin-bottom: 49px;
 
     &--mobile {
@@ -153,6 +154,40 @@
 
     &--address {
       margin-bottom: 0;
+    }
+
+    &--mobile:hover,
+    &--mobile:focus,
+    &--email:hover,
+    &--email:focus {
+      color: #283645;
+    }
+
+    &--mobile:hover::after,
+    &--mobile:focus::after,
+    &--mobile:active::after,
+    &--email:hover::after,
+    &--email:focus::after,
+    &--email:active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #283645;
+    }
+
+    &--mobile:active,
+    &--email:active {
+      color: #283645;
+      opacity: 0.3;
+    }
+
+    &--mobile:active::after,
+    &--email:active::after {
+      opacity: 0.3;
     }
   }
 
