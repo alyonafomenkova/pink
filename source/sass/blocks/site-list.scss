@@ -20,6 +20,15 @@
   box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
   word-wrap: break-word;
   color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: #d22856;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -49,5 +58,13 @@
     text-transform: none;
     box-shadow: none;
     border: none;
+
+    &:active {
+      color: #ffffff;
+    }
+
+    &--active {
+      border-bottom: solid 2px #ffffff;
+    }
   }
 }
