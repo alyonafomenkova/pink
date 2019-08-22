@@ -16,6 +16,17 @@
   &-img--tablet,
   &-img--desktop {
     display: none;
+    fill: #283645;
+  }
+
+  &:hover .page-footer__logo-img,
+  &:focus .page-footer__logo-img {
+    fill: #d22856;
+  }
+
+  &:active .page-footer__logo-img {
+    fill: #283645;
+    opacity: 0.3;
   }
 }
 
