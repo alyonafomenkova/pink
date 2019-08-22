@@ -19,16 +19,30 @@
   margin-right: 9px;
   border: 3px solid #e9ebec;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--tw {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--fb {
+    background-image: url("../img/icon-facebook.svg");
+  }
 
   &--youtube {
-    position: relative;
     margin-right: 0;
+    background-image: url("../img/icon-youtube.svg");
   }
-}
 
-.social__icon--youtube {
-  position: absolute;
-  left: calc(50% - 5px);
+  &:hover,
+  &:focus {
+    border-color: #283645;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet-width) {
