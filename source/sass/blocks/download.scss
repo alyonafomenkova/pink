@@ -4,6 +4,16 @@
 
 .download__main-btn {
   color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .download__list {
