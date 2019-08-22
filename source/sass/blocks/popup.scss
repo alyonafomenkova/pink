@@ -57,6 +57,19 @@
   background-color: #2aab6d;
   border: none;
   border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: rgba(28, 155, 94, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 @media (min-width: $tablet-width) {
