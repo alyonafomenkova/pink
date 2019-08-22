@@ -12,7 +12,7 @@
   display: none;
 }
 
-.main-nav--closed .main-nav__toggle-btn {
+.main-nav__toggle-btn {
   position: absolute;
   top: -21px;
   right: 19px;
@@ -22,8 +22,14 @@
   font-size: 0;
   border: none;
   background: transparent;
-  background-repeat: no-repeat;
-  background-image: url("../img/icon-menu-burger.svg");
+}
+
+.main-nav__toggle-icon {
+  fill: #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle-icon--cross {
+  display: none;
 }
 
 .main-nav--closed .site-list__item {
@@ -35,16 +41,22 @@
 }
 
 .main-nav--opened .main-nav__toggle-btn {
-  position: absolute;
   top: -24px;
-  right: 19px;
   width: 24px;
   height: 23px;
-  font-size: 0;
-  border: none;
-  background: transparent;
-  background-repeat: no-repeat;
-  background-image: url("../img/icon-menu-cross.svg");
+}
+
+.main-nav--opened .main-nav__toggle-icon--burger {
+  display: none;
+}
+
+.main-nav__toggle-btn:hover .main-nav__toggle-icon,
+.main-nav__toggle-btn:focus .main-nav__toggle-icon {
+  fill: #d22856;
+}
+
+.main-nav__toggle-btn:active .main-nav__toggle-icon {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
