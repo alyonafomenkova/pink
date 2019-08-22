@@ -46,6 +46,18 @@
   display: none;
 }
 
+.slider__toggle:hover,
+.slider__toggle:focus,
+.slider__arrow:hover,
+.slider__arrow:focus {
+  opacity: 0.6;
+}
+
+.slider__toggle:active,
+.slider__arrow:active {
+  opacity: 0.1;
+}
+
 @media (min-width: $tablet-width) {
   .slider__list {
     width: 620px;
