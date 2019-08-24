@@ -29,12 +29,37 @@
   margin-bottom: 12px;
   color: #d22856;
   border-color: #d22856;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
+  }
 }
 
 .post__main-btn--cancel {
   color: #283645;
   border-color: #283645;
   opacity: 0.1;
+
+  &:hover,
+  &:focus {
+    color: #283645;
+    border-color: #283645;
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #283645;
+    border-color: #283645;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
