@@ -103,14 +103,6 @@ gulp.task("html", function () {
     }))
     .pipe(gulp.dest("build"));
 });
-/*
-gulp.task("js", function () {
-  return gulp.src("source/js/*.js")
-    .pipe(concat("main.js"))
-    .pipe(uglify())
-    .pipe(rename("main.min.js"))
-    .pipe(gulp.dest("build/js"))
-});*/
 
 gulp.task("indexjs", function () {
   return gulp.src([
