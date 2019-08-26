@@ -103,12 +103,48 @@ gulp.task("html", function () {
     }))
     .pipe(gulp.dest("build"));
 });
-
+/*
 gulp.task("js", function () {
   return gulp.src("source/js/*.js")
     .pipe(concat("main.js"))
     .pipe(uglify())
     .pipe(rename("main.min.js"))
+    .pipe(gulp.dest("build/js"))
+});*/
+
+gulp.task("indexjs", function () {
+  return gulp.src([
+    "source/js/map.js",
+    "source/js/menu-toggle.js",
+    "source/js/slider.js",
+    "source/js/picturefill.min.js"
+  ])
+    .pipe(concat("index.js"))
+    .pipe(uglify())
+    .pipe(rename("index.min.js"))
+    .pipe(gulp.dest("build/js"))
+});
+
+gulp.task("photojs", function () {
+  return gulp.src([
+    "source/js/menu-toggle.js",
+    "source/js/picturefill.min.js"
+  ])
+    .pipe(concat("photo.js"))
+    .pipe(uglify())
+    .pipe(rename("photo.min.js"))
+    .pipe(gulp.dest("build/js"))
+});
+
+gulp.task("formjs", function () {
+  return gulp.src([
+    "source/js/menu-toggle.js",
+    "source/js/popup.js",
+    "source/js/picturefill.min.js"
+  ])
+    .pipe(concat("form.js"))
+    .pipe(uglify())
+    .pipe(rename("form.min.js"))
     .pipe(gulp.dest("build/js"))
 });
 
@@ -119,7 +155,9 @@ gulp.task("build", gulp.series(
   "sprite",
   "w3cjs",
   "html",
-  "js"
+  "indexjs",
+  "photojs",
+  "formjs"
 ));
 
 gulp.task("server", function () {
@@ -132,7 +170,9 @@ gulp.task("server", function () {
   });
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("indexjs", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("photojs", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("formjs", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
