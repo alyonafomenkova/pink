@@ -1,27 +1,29 @@
 "use strict";
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var posthtml = require("gulp-posthtml");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var del = require("del");
-var rename = require("gulp-rename");
-var svgstore = require("gulp-svgstore");
-var csso = require("gulp-csso");
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var htmlmin = require("gulp-htmlmin");
-var uglify = require("gulp-uglify");
-var concat = require("gulp-concat");
+var gulp = require("gulp"); // сам сборщик
+var sass = require("gulp-sass"); // преобразует контент из sass в css
+var plumber = require("gulp-plumber"); // показывает ошибки в консоли и продолжает выполнение потока (не останавливает выполнение скрипта)
+var postcss = require("gulp-postcss"); // плагин для преобразования сss
+var posthtml = require("gulp-posthtml"); // парсер HTML
+var autoprefixer = require("autoprefixer"); // автопрефексер, работает в потоке postcss
+var server = require("browser-sync").create(); // автоматически перезагружает страницу
+var del = require("del"); // плагин для удаления файлов и папок
+var rename = require("gulp-rename"); // плагин для переименования файлов
+var svgstore = require("gulp-svgstore"); // сборщик спрайтов
+var csso = require("gulp-csso"); // минификатор css
+var imagemin = require("gulp-imagemin"); // сжатие графики без потерь
+var webp = require("gulp-webp"); // конвертирует графику в формат webp
+var include = require("posthtml-include"); // плагин для posthtml, позволяет использовать <include> в HTML
+var w3cjs = require("gulp-w3cjs"); // валидатор HTML
+var htmlmin = require("gulp-htmlmin"); // минификатор HTML
+var uglify = require("gulp-uglify"); // минификатор JS
+var concat = require("gulp-concat"); // плагин для объединения файлов
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/*",
-    //"!source/img/sprite",
+    "!source/img/sprite",
     "source/js/**",
     "source/*.html"
   ], {
@@ -60,41 +62,42 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp.src([
-    "source/img/map*.jpg",
-    "source/img/photo*.jpg",
-    "source/img/triple*.jpg",
-    "source/img/video*.jpg"
-  ])
-    .pipe(webp({ quality: 90 }))
+    "source/img/bg-map-*.{png,jpg}",
+    "source/img/photo-*.{png,jpg}",
+    "source/img/panorama-*.{png,jpg}"])
+    .pipe(webp({quality: 70}))
     .pipe(gulp.dest("source/img"));
 });
 
-/*gulp.task("sprite", function () {
+gulp.task("sprite", function () {
   return gulp.src([
-    "source/img/sprite/search-icon.svg",
-    "source/img/sprite/basket-icon.svg",
-    "source/img/sprite/interior-icon.svg",
-    "source/img/sprite/toys-icon.svg",
-    "source/img/sprite/icon-left-arrow.svg",
-    "source/img/sprite/icon-right-arrow.svg",
-    "source/img/sprite/logo-footer.svg",
-    "source/img/sprite/icon-instagram.svg",
-    "source/img/sprite/icon-fb.svg",
-    "source/img/sprite/icon-twitter.svg",
-    "source/img/sprite/htmlacademy.svg",
-    "source/img/sprite/icon-phone.svg",
-    "source/img/sprite/icon-mail.svg"
+    "source/img/sprite/icon-editor-*.svg",
+    "source/img/sprite/icon-menu-*.svg",
+    "source/img/sprite/logo-*.svg",
   ])
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
-});*/
+});
+
+gulp.task('w3cjs', function () {
+  return gulp.src("source/*.html")
+    .pipe(w3cjs())
+    .pipe(w3cjs.reporter());
+});
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(posthtml([
+      include(),
+    ]))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      collapseInlineTagWhitespace: true,
+      removeEmptyAttributes: true
+    }))
     .pipe(rename(function (path) {
       path.basename += ".min";
     }))
@@ -113,7 +116,8 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  //"sprite",
+  "sprite",
+  "w3cjs",
   "html",
   "js"
 ));
@@ -127,7 +131,7 @@ gulp.task("server", function () {
     ui: false
   });
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  //gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
@@ -138,3 +142,5 @@ gulp.task("refresh", function (done) {
 });
 
 gulp.task("start", gulp.series("build", "server"));
+
+// npmx gulp images и npmx gulp webp запускать локально, чтобы не увеличивать время сборки каждый раз
