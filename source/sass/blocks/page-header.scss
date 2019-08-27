@@ -33,7 +33,6 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -49,9 +48,7 @@
 .page-header--bottom {
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-position: left 105px, center -70px;
-  background-size: 258px 320px, cover;
   background-repeat: no-repeat, no-repeat;
-  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
