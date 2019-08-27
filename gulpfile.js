@@ -109,7 +109,8 @@ gulp.task("indexjs", function () {
     "source/js/map.js",
     "source/js/menu-toggle.js",
     "source/js/slider.js",
-    "source/js/picturefill.min.js"
+    "source/js/picturefill.min.js",
+    "source/js/svg4everybody.min.js"
   ])
     .pipe(concat("index.js"))
     .pipe(uglify())
@@ -120,7 +121,8 @@ gulp.task("indexjs", function () {
 gulp.task("photojs", function () {
   return gulp.src([
     "source/js/menu-toggle.js",
-    "source/js/picturefill.min.js"
+    "source/js/picturefill.min.js",
+    "source/js/svg4everybody.min.js"
   ])
     .pipe(concat("photo.js"))
     .pipe(uglify())
@@ -132,7 +134,8 @@ gulp.task("formjs", function () {
   return gulp.src([
     "source/js/menu-toggle.js",
     "source/js/popup.js",
-    "source/js/picturefill.min.js"
+    "source/js/picturefill.min.js",
+    "source/js/svg4everybody.min.js"
   ])
     .pipe(concat("form.js"))
     .pipe(uglify())
