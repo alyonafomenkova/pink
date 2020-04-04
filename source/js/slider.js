@@ -8,8 +8,6 @@ var tariffsTable = tariffsBlock.querySelector(".tariffs__table");
 var tariffToggles = tariffsBlock.querySelectorAll(".slider__toggle");
 var tariffCurrentToggle = tariffsBlock.querySelector(".slider__toggle--current");
 
-TODO: // rewrite dotsSlider and arrowSlider using classes
-
 reviewsBlock.classList.remove("reviews--nojs");
 reviewsBlock.classList.add("reviews--js");
 
